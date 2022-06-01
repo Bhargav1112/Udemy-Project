@@ -15,7 +15,6 @@ const NewExpense = (props) => {
 
     const showFormHandler = () => {
         setIsEditing(true);
-        console.log("newEx");
     };
 
     const cancelEditing = () => {
