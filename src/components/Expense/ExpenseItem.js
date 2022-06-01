@@ -3,8 +3,11 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
+    const deleteHandler = () => {
+        props.onDelete(props.id);
+    };
     return (
-        <li>
+        <li onClick={deleteHandler}>
             <div className="expense-item">
                 <ExpenseDate date={props.date} />
                 <div className="expense-item__description">

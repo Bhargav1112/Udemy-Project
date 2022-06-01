@@ -38,10 +38,15 @@ function App() {
         });
     };
 
+    const onDeleteHandler = (id) => {
+        setExpenses((precExpense) => precExpense.filter((el) => el.id !== id));
+        console.log(id);
+    };
+
     return (
         <div>
             <NewExpense onAddData={onAddExpense} />
-            <Expenses items={expenses} />
+            <Expenses onDeleteItems={onDeleteHandler} items={expenses} />
         </div>
     );
 }

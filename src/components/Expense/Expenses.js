@@ -19,7 +19,10 @@ const Expenses = (props) => {
         <div className="expenses">
             <ExpensesFilter value={filteredYear} onFilter={onFilteredYear} />
             <ExpenseChart expenses={filterExpenses} />
-            <ExpensesList filterExpense={filterExpenses} />
+            <ExpensesList
+                onDelete={props.onDeleteItems}
+                filterExpense={filterExpenses}
+            />
         </div>
     );
 };
